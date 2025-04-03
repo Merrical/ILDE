@@ -9,6 +9,10 @@ This repo contains the official implementation of our paper: Instance-dependent 
 ### Implementation 
 
 ```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
 class ILDE(nn.Module):
     def __init__(self, num_samples, num_classes=10, alpha=3.0, beta=0.7, tau=3.0, delta=1.0):
         super(ILDE, self).__init__()
@@ -57,7 +61,7 @@ for step, (imgs, labels, index) in enumerate(train_loader):
 
 ### Hyperparameters for synthetic noisy datasets 
 
-<p align="center"><img src="https://raw.githubusercontent.com/Merrical/ILDE/master/hyper_syn.png" width="90%"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Merrical/ILDE/master/hyper_syn.png" width="50%"></p>
 
 ### Bibtex
 ```
